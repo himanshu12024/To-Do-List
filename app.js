@@ -3,6 +3,7 @@ const bodyparser=require("body-parser");
 const date=require(__dirname+"/date.js");
 const mongoose=require("mongoose");
 const _=require("lodash");
+const port=5000;
 
 const app=express();
 app.set('view engine','ejs');
@@ -163,6 +164,6 @@ app.post("/:listTitle",function(req,res){
 })
 
 
-app.listen(3000,function(){
+app.listen(process.env.PORT||port,function(){
     console.log("server is running on port 3000");
 })
