@@ -15,3 +15,8 @@ blocks:
         - name: 'Job #2'
           commands:
             - echo "Second Job"
+      env_vars:
+        - name: FOO_1
+          value: BAR_1
+        - name: FOO_2
+          value: BAR_2
