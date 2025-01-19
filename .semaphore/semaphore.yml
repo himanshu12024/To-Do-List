@@ -12,9 +12,13 @@ blocks:
           commands:
             - checkout
             - 'echo "Hello, World!"'
+            - echo "$FOO_1"
+            - echo "$FOO_2"
         - name: 'Job #2'
           commands:
             - echo "Second Job"
+            - echo "$FOO_1"
+            - echo "$FOO_2"
       env_vars:
         - name: FOO_1
           value: BAR_1
